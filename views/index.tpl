@@ -29,6 +29,9 @@
       <a href="#poxiao" aria-controls="poxiao" role="tab" data-toggle="tab">破晓电影</a>
     </li>
     <li role="presentation">
+      <a href="#piaohua" aria-controls="piaohua" role="tab" data-toggle="tab">飘花电影</a>
+    </li>
+    <li role="presentation">
       <a href="#hldm" aria-controls="hldm" role="tab" data-toggle="tab">红旅动漫</a>
     </li>
   </ul>
@@ -36,7 +39,7 @@
   <div class="tab-content">
     <div class="panel panel-default tab-pane active" role="tabpanel" id="poxiao">
       <div class="panel-body">
-        <h3>最近更新电影下载和五星电影推荐</h3>
+        <h3>首页</h3>
         <table class="table table-bordered">
           <tr>
             <td>地址</td>
@@ -99,9 +102,95 @@
         </table>
       </div>
     </div>
+    <div class="panel panel-default tab-pane" role="tabpanel" id="piaohua">
+      <div class="panel-body">
+        <h3>首页</h3>
+        <table class="table table-bordered">
+          <tr>
+            <td>地址</td>
+            <td>/poxiao/index</td>
+          </tr>
+          <tr>
+            <td>参数</td>
+            <td>无</td>
+          </tr>
+          <tr>
+            <td>例子</td>
+            <td><a href="https://apis.tomoya.cn/piaohua/index/" target="_blank">https://apis.tomoya.cn/piaohua/index/</a></td>
+          </tr>
+          <tr>
+            <td>对应原网页</td>
+            <td><a href="http://www.piaohua.com/" target="_blank">http://www.piaohua.com/</a></td>
+          </tr>
+        </table>
+        <hr>
+
+        <h3>电影详情</h3>
+        <table class="table table-bordered">
+          <tr>
+            <td>地址</td>
+            <td>/piaohua/detail</td>
+          </tr>
+          <tr>
+            <td>参数</td>
+            <td>url: 电影详情页面链接</td>
+          </tr>
+          <tr>
+            <td>例子</td>
+            <td><a href="https://apis.tomoya.cn/piaohua/detail?url=http://www.piaohua.com/html/xiju/2017/0621/32105.html" target="_blank">https://apis.tomoya.cn/piaohua/detail?url=http://www.piaohua.com/html/xiju/2017/0621/32105.html</a></td>
+          </tr>
+          <tr>
+            <td>对应原网页</td>
+            <td><a href="http://www.piaohua.com/html/xiju/2017/0621/32105.html" target="_blank">http://www.piaohua.com/html/xiju/2017/0621/32105.html</a></td>
+          </tr>
+        </table>
+        <hr>
+
+        <h3>电影大全</h3>
+        <table class="table table-bordered">
+          <tr>
+            <td>地址</td>
+            <td>/piaohua/movie</td>
+          </tr>
+          <tr>
+            <td>参数</td>
+            <td>pageNum: 页数, type: 电影类型（dongzuo, xiju, aiqing, kehuan, juqing, xuannian, wenyi, zhanzheng, kongbu, zainan, lianxuju, dongman, zongyijiemu, 3D, jilupian, huaijiu）</td>
+          </tr>
+          <tr>
+            <td>例子</td>
+            <td><a href="https://apis.tomoya.cn/piaohua/movie/?pageNum=1&type=dongzuo" target="_blank">https://apis.tomoya.cn/piaohua/movie/?pageNum=1&type=dongzuo</a></td>
+          </tr>
+          <tr>
+            <td>对应原网页</td>
+            <td><a href="http://www.piaohua.com/html/dongzuo/index.html" target="_blank">http://www.piaohua.com/html/dongzuo/index.html</a></td>
+          </tr>
+        </table>
+        <hr>
+
+        <h3>今日更新电影</h3>
+        <table class="table table-bordered">
+          <tr>
+            <td>地址</td>
+            <td>/piaohua/lastest</td>
+          </tr>
+          <tr>
+            <td>参数</td>
+            <td>无</td>
+          </tr>
+          <tr>
+            <td>例子</td>
+            <td><a href="https://apis.tomoya.cn/piaohua/lastest" target="_blank">https://apis.tomoya.cn/piaohua/lastest</a></td>
+          </tr>
+          <tr>
+            <td>对应原网页</td>
+            <td><a href="http://www.piaohua.com/html/zuixindianying.html" target="_blank">http://www.piaohua.com/html/zuixindianying.html</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
     <div class="panel panel-default tab-pane" role="tabpanel" id="hldm">
       <div class="panel-body">
-        //TODO
+        <span class="glyphicon glyphicon-warning-sign text-danger"></span> 红旅动漫网站内容好像2017年都没有更新了，暂时不解析了
       </div>
     </div>
   </div>

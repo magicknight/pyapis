@@ -13,16 +13,16 @@ type PoxiaoController struct {
 	beego.Controller
 }
 
-const baseUrl = "http://www.poxiao.com"
+var poxiaoBaseUrl = "http://www.poxiao.com"
 
 func (c *PoxiaoController) Index() {
 	result := models.Result{Code: 200}
 	detail := make(map[string]interface{})
 
 	client := &http.Client{}
-	req, err := http.NewRequest("GET", baseUrl, nil)
+	req, err := http.NewRequest("GET", poxiaoBaseUrl, nil)
 	req.Header.Add("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36")
-	req.Header.Add("Referer", baseUrl)
+	req.Header.Add("Referer", poxiaoBaseUrl)
 	res, err := client.Do(req)
 
 	if err != nil {
@@ -46,7 +46,7 @@ func (c *PoxiaoController) Index() {
 
 				poxiaoIndex := make(map[string]interface{})
 				poxiaoIndex["MovieName"] = movieName
-				poxiaoIndex["MovieUrl"] = baseUrl + movieUrl
+				poxiaoIndex["MovieUrl"] = poxiaoBaseUrl + movieUrl
 				poxiaoIndex["MovieType"] = movieType
 				poxiaoIndex["MovieDate"] = movieDate
 
@@ -65,7 +65,7 @@ func (c *PoxiaoController) Index() {
 				poxiaoFiveStarMovie := make(map[string]interface{})
 				poxiaoFiveStarMovie["movieName"] = movieName
 				poxiaoFiveStarMovie["movieImage"] = movieImage
-				poxiaoFiveStarMovie["movieUrl"] = baseUrl + movieUrl
+				poxiaoFiveStarMovie["movieUrl"] = poxiaoBaseUrl + movieUrl
 
 				five_star_movies[i] = poxiaoFiveStarMovie
 			})
@@ -88,7 +88,7 @@ func (c *PoxiaoController) Detail() {
 	client := &http.Client{}
 	req, err := http.NewRequest("GET", movieDetailUrl, nil)
 	req.Header.Add("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36")
-	req.Header.Add("Referer", baseUrl)
+	req.Header.Add("Referer", poxiaoBaseUrl)
 	res, err := client.Do(req)
 
 	if err != nil {
@@ -182,7 +182,7 @@ func (c *PoxiaoController) Movie() {
 	client := &http.Client{}
 	req, err := http.NewRequest("GET", url, nil)
 	req.Header.Add("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36")
-	req.Header.Add("Referer", baseUrl)
+	req.Header.Add("Referer", poxiaoBaseUrl)
 	res, err := client.Do(req)
 
 	if err != nil {
@@ -205,7 +205,7 @@ func (c *PoxiaoController) Movie() {
 				movie["image"] = imgUrl
 
 				movieUrl, _ := s.Find("h3 a").Attr("href")
-				movie["url"] = baseUrl + movieUrl
+				movie["url"] = poxiaoBaseUrl + movieUrl
 
 				movie["name"] = utils.ConvGB2312ToUTF8(s.Find("h3 a").Text())
 
