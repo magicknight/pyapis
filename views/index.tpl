@@ -106,5 +106,13 @@
     </div>
   </div>
 </div>
+<hr>
+<div class="footer text-center">
+  <p><a href="https://github.com/tomoya92/pyapis">源码</a> &nbsp; <a href="https://github.com/tomoya92/pyapis/issues">有问题？</a></p>
+  <p>
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  </p>
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</div>
 </body>
 </html>
