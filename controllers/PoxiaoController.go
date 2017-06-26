@@ -14,16 +14,23 @@ type PoxiaoController struct {
 }
 
 var poxiaoBaseUrl = "http://www.poxiao.com"
+var poxiaoClient = &http.Client{}
+
+func poxiaoHttpClient(url string) (*http.Response, error) {
+	req, err := http.NewRequest("GET", piaohuaBaseUrl, nil)
+	beego.Debug(req.Header.Get("Cookie"))
+	req.Header.Add("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36")
+	req.Header.Add("Referer", piaohuaBaseUrl)
+	req.Header.Add("Cookie", "__cfduid=d0864bf384208cfca5ec08dbd4b3e270a1498183457; cf_clearance=8e0d5095918585d1a0e64b1d40d17554998f2687-1498442978-3600")
+	res, err := piaohuaClient.Do(req)
+	return res, err
+}
 
 func (c *PoxiaoController) Index() {
 	result := models.Result{Code: 200}
 	detail := make(map[string]interface{})
 
-	client := &http.Client{}
-	req, err := http.NewRequest("GET", poxiaoBaseUrl, nil)
-	req.Header.Add("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36")
-	req.Header.Add("Referer", poxiaoBaseUrl)
-	res, err := client.Do(req)
+	res, err := poxiaoHttpClient(poxiaoBaseUrl)
 
 	if err != nil {
 		result.Code = 201
@@ -85,11 +92,7 @@ func (c *PoxiaoController) Detail() {
 
 	movieDetailUrl := c.Input().Get("url")
 
-	client := &http.Client{}
-	req, err := http.NewRequest("GET", movieDetailUrl, nil)
-	req.Header.Add("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36")
-	req.Header.Add("Referer", poxiaoBaseUrl)
-	res, err := client.Do(req)
+	res, err := poxiaoHttpClient(movieDetailUrl)
 
 	if err != nil {
 		result.Code = 201
@@ -179,11 +182,7 @@ func (c *PoxiaoController) Movie() {
 		url += "index_" + pageNum + ".html"
 	}
 
-	client := &http.Client{}
-	req, err := http.NewRequest("GET", url, nil)
-	req.Header.Add("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36")
-	req.Header.Add("Referer", poxiaoBaseUrl)
-	res, err := client.Do(req)
+	res, err := poxiaoHttpClient(url)
 
 	if err != nil {
 		result.Code = 201

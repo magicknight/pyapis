@@ -51,7 +51,7 @@
           </tr>
           <tr>
             <td>例子</td>
-            <td><a href="https://apis.tomoya.cn/poxiao/index" target="_blank">https://apis.tomoya.cn/poxiao/index</a></td>
+            <td><a href="/poxiao/index" target="_blank">https://apis.tomoya.cn/poxiao/index</a></td>
           </tr>
           <tr>
             <td>对应原网页</td>
@@ -72,7 +72,7 @@
           </tr>
           <tr>
             <td>例子</td>
-            <td><a href="https://apis.tomoya.cn/poxiao/detail?url=http://www.poxiao.com/movie/42245.html" target="_blank">https://apis.tomoya.cn/poxiao/index?url=http://www.poxiao.com/movie/42245.html</a></td>
+            <td><a href="/poxiao/detail?url=http://www.poxiao.com/movie/42245.html" target="_blank">https://apis.tomoya.cn/poxiao/index?url=http://www.poxiao.com/movie/42245.html</a></td>
           </tr>
           <tr>
             <td>对应原网页</td>
@@ -93,7 +93,7 @@
           </tr>
           <tr>
             <td>例子</td>
-            <td><a href="https://apis.tomoya.cn/poxiao/movie/?pageNum=1" target="_blank">https://apis.tomoya.cn/poxiao/movie/?pageNum=1</a></td>
+            <td><a href="/poxiao/movie/?pageNum=1" target="_blank">https://apis.tomoya.cn/poxiao/movie/?pageNum=1</a></td>
           </tr>
           <tr>
             <td>对应原网页</td>
@@ -116,7 +116,7 @@
           </tr>
           <tr>
             <td>例子</td>
-            <td><a href="https://apis.tomoya.cn/piaohua/index/" target="_blank">https://apis.tomoya.cn/piaohua/index/</a></td>
+            <td><a href="/piaohua/index/" target="_blank">https://apis.tomoya.cn/piaohua/index/</a></td>
           </tr>
           <tr>
             <td>对应原网页</td>
@@ -137,7 +137,7 @@
           </tr>
           <tr>
             <td>例子</td>
-            <td><a href="https://apis.tomoya.cn/piaohua/detail?url=http://www.piaohua.com/html/xiju/2017/0621/32105.html" target="_blank">https://apis.tomoya.cn/piaohua/detail?url=http://www.piaohua.com/html/xiju/2017/0621/32105.html</a></td>
+            <td><a href="/piaohua/detail?url=http://www.piaohua.com/html/xiju/2017/0621/32105.html" target="_blank">https://apis.tomoya.cn/piaohua/detail?url=http://www.piaohua.com/html/xiju/2017/0621/32105.html</a></td>
           </tr>
           <tr>
             <td>对应原网页</td>
@@ -158,7 +158,7 @@
           </tr>
           <tr>
             <td>例子</td>
-            <td><a href="https://apis.tomoya.cn/piaohua/movie/?pageNum=1&type=dongzuo" target="_blank">https://apis.tomoya.cn/piaohua/movie/?pageNum=1&type=dongzuo</a></td>
+            <td><a href="/piaohua/movie/?pageNum=1&type=dongzuo" target="_blank">https://apis.tomoya.cn/piaohua/movie/?pageNum=1&type=dongzuo</a></td>
           </tr>
           <tr>
             <td>对应原网页</td>
@@ -179,7 +179,7 @@
           </tr>
           <tr>
             <td>例子</td>
-            <td><a href="https://apis.tomoya.cn/piaohua/lastest" target="_blank">https://apis.tomoya.cn/piaohua/lastest</a></td>
+            <td><a href="/piaohua/lastest" target="_blank">https://apis.tomoya.cn/piaohua/lastest</a></td>
           </tr>
           <tr>
             <td>对应原网页</td>
