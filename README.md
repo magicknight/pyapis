@@ -2,7 +2,7 @@
 
 ## 文档
 
-[https://apis/tomoya.cn](https://apis.tomoya.cn)
+[https://apis.tomoya.cn](https://apis.tomoya.cn)
 
 ## 已经整理的网站
 
